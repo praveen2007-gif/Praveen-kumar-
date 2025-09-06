@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Vocal Health AI",
+  "description": "An AI-powered application that analyzes voice recordings to identify potential health risks such as asthma, COPD, lung infections, and depression, providing a preliminary screening for users.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
