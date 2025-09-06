@@ -1,0 +1,15 @@
+/* Add a global transition for a smoother dark mode toggle */
+body,
+div,
+main,
+header,
+p,
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+span {
+  transition: color 150ms ease-in-out, background-color 150ms ease-in-out;
+}

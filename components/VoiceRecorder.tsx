@@ -87,11 +87,11 @@ const VoiceRecorder: React.FC<VoiceRecorderProps> = ({ onStateChange, onRecordin
 
   return (
     <div className="flex flex-col items-center justify-center p-6">
-        <div className="mb-6 p-4 text-center bg-indigo-50 border-l-4 border-indigo-500 text-indigo-800 rounded-r-lg">
+        <div className="mb-6 p-4 text-center bg-indigo-50 border-l-4 border-indigo-500 text-indigo-800 rounded-r-lg dark:bg-indigo-900/20 dark:border-indigo-500 dark:text-indigo-200">
             <h3 className="font-semibold">Instructions</h3>
             <p>For the best analysis, please speak clearly for at least 20-30 seconds. You can describe your day, read a paragraph, or talk about how you are feeling.</p>
         </div>
-      <div className={`relative w-32 h-32 flex items-center justify-center rounded-full transition-all duration-300 ${isRecording ? 'bg-red-100' : 'bg-indigo-100'}`}>
+      <div className={`relative w-32 h-32 flex items-center justify-center rounded-full transition-all duration-300 ${isRecording ? 'bg-red-100 dark:bg-red-500/20' : 'bg-indigo-100 dark:bg-indigo-500/20'}`}>
         {isRecording && <div className="absolute inset-0 rounded-full bg-red-500 opacity-20 animate-ping"></div>}
         <button
           onClick={isRecording ? stopRecording : startRecording}
@@ -111,10 +111,10 @@ const VoiceRecorder: React.FC<VoiceRecorderProps> = ({ onStateChange, onRecordin
         </button>
       </div>
       <div className="mt-6 text-center">
-        <p className="text-xl font-mono tracking-wider text-gray-700" aria-live="polite">
+        <p className="text-xl font-mono tracking-wider text-gray-700 dark:text-gray-300" aria-live="polite">
           {formatTime(timer)}
         </p>
-        <p className="text-gray-500 mt-1">
+        <p className="text-gray-500 dark:text-gray-400 mt-1">
           {isRecording ? 'Recording...' : 'Press the button to start'}
         </p>
       </div>
